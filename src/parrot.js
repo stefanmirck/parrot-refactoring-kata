@@ -16,8 +16,7 @@ export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
 }
 
 class Parrot {
-	constructor(type, numberOfCoconuts, voltage, isNailed) {
-		this.type = type;
+	constructor(numberOfCoconuts, voltage, isNailed) {
 		this.numberOfCoconuts = numberOfCoconuts;
 		this.voltage = voltage;
 		this.isNailed = isNailed;
@@ -38,7 +37,7 @@ class Parrot {
 
 class EuropeanParrot extends Parrot {
 	constructor(numberOfCoconuts, voltage, isNailed) {
-		super(PARROT_TYPES.EUROPEAN, numberOfCoconuts, voltage, isNailed);
+		super(numberOfCoconuts, voltage, isNailed);
 	}
 
 	getSpeed() {
@@ -48,7 +47,7 @@ class EuropeanParrot extends Parrot {
 
 class AfricanParrot extends Parrot {
 	constructor(numberOfCoconuts, voltage, isNailed) {
-		super(PARROT_TYPES.AFRICAN, numberOfCoconuts, voltage, isNailed);
+		super(numberOfCoconuts, voltage, isNailed);
 	}
 
 	getSpeed() {
@@ -58,7 +57,7 @@ class AfricanParrot extends Parrot {
 
 class NorwegianBlueParrot extends Parrot {
 	constructor(numberOfCoconuts, voltage, isNailed) {
-		super(PARROT_TYPES.NORWEGIAN_BLUE, numberOfCoconuts, voltage, isNailed);
+		super(numberOfCoconuts, voltage, isNailed);
 	}
 
 	getSpeed() {
