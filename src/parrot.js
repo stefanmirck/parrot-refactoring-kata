@@ -16,10 +16,6 @@ export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
 }
 
 class Parrot {
-	getBaseSpeedWithVoltage(voltage) {
-		return Math.min(24, voltage * this.getBaseSpeed());
-	}
-
 	getLoadFactor() {
 		return 9;
 	}
@@ -57,5 +53,9 @@ class NorwegianBlueParrot extends Parrot {
 
 	getSpeed() {
 		return (this.isNailed) ? 0 : this.getBaseSpeedWithVoltage(this.voltage);
+	}
+
+	getBaseSpeedWithVoltage(voltage) {
+		return Math.min(24, voltage * this.getBaseSpeed());
 	}
 }
