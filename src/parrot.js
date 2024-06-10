@@ -16,8 +16,6 @@ export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
 }
 
 class Parrot {
-	constructor() { }
-
 	getBaseSpeedWithVoltage(voltage) {
 		return Math.min(24, voltage * this.getBaseSpeed());
 	}
@@ -32,10 +30,6 @@ class Parrot {
 }
 
 class EuropeanParrot extends Parrot {
-	constructor() {
-		super();
-	}
-
 	getSpeed() {
 		return this.getBaseSpeed();
 	}
