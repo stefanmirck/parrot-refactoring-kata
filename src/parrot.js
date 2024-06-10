@@ -4,7 +4,18 @@ export const PARROT_TYPES = {
 	NORWEGIAN_BLUE: 'NORWEGIAN_BLUE',
 };
 
-export class Parrot {
+export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
+	switch (type) {
+		case PARROT_TYPES.EUROPEAN:
+			return new Parrot(type, numberOfCoconuts, voltage, isNailed);
+		case PARROT_TYPES.AFRICAN:
+			return new Parrot(type, numberOfCoconuts, voltage, isNailed);
+		case PARROT_TYPES.NORWEGIAN_BLUE:
+			return new Parrot(type, numberOfCoconuts, voltage, isNailed);
+	}
+}
+
+class Parrot {
 	constructor(type, numberOfCoconuts, voltage, isNailed) {
 		this.type = type;
 		this.numberOfCoconuts = numberOfCoconuts;
