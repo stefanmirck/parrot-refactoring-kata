@@ -1,0 +1,20 @@
+{
+	"name": "parrot-refactoring-kata",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Kata to learn about polymorphism",
+	"keywords": [
+		"kata",
+		"coding exercise"
+	],
+	"author": "Stefan Mirck (https://github.com/stefanmirck)",
+	"contributors": [
+		"Emily Bache (https://github.com/emilybache)",
+		"Attila Kerekes (https://github.com/keriati)"
+	],
+	"license": "MIT",
+	"main": "src/parrot.js",
+	"scripts": {
+		"test": "node --test"
+	}
+}
