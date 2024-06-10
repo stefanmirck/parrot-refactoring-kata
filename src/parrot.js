@@ -6,9 +6,9 @@ export const PARROT_TYPES = {
 
 export function createParrot({
 	type,
-	numberOfCoconuts,
-	voltage,
-	isNailed
+	numberOfCoconuts = 0,
+	voltage = 0,
+	isNailed = false,
 }) {
 	switch (type) {
 		case PARROT_TYPES.EUROPEAN:
