@@ -17,7 +17,6 @@ export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
 
 class Parrot {
 	constructor(numberOfCoconuts, voltage, isNailed) {
-		this.numberOfCoconuts = numberOfCoconuts;
 		this.voltage = voltage;
 		this.isNailed = isNailed;
 	}
@@ -48,6 +47,8 @@ class EuropeanParrot extends Parrot {
 class AfricanParrot extends Parrot {
 	constructor(numberOfCoconuts, voltage, isNailed) {
 		super(numberOfCoconuts, voltage, isNailed);
+
+		this.numberOfCoconuts = numberOfCoconuts;
 	}
 
 	getSpeed() {
