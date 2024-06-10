@@ -7,19 +7,16 @@ export const PARROT_TYPES = {
 export function createParrot(type, numberOfCoconuts, voltage, isNailed) {
 	switch (type) {
 		case PARROT_TYPES.EUROPEAN:
-			return new EuropeanParrot(voltage, isNailed);
+			return new EuropeanParrot();
 		case PARROT_TYPES.AFRICAN:
-			return new AfricanParrot(numberOfCoconuts, voltage, isNailed);
+			return new AfricanParrot(numberOfCoconuts);
 		case PARROT_TYPES.NORWEGIAN_BLUE:
 			return new NorwegianBlueParrot(voltage, isNailed);
 	}
 }
 
 class Parrot {
-	constructor(voltage, isNailed) {
-		this.voltage = voltage;
-		this.isNailed = isNailed;
-	}
+	constructor() { }
 
 	getBaseSpeedWithVoltage(voltage) {
 		return Math.min(24, voltage * this.getBaseSpeed());
@@ -35,8 +32,8 @@ class Parrot {
 }
 
 class EuropeanParrot extends Parrot {
-	constructor(voltage, isNailed) {
-		super(voltage, isNailed);
+	constructor() {
+		super();
 	}
 
 	getSpeed() {
@@ -45,8 +42,8 @@ class EuropeanParrot extends Parrot {
 }
 
 class AfricanParrot extends Parrot {
-	constructor(numberOfCoconuts, voltage, isNailed) {
-		super(voltage, isNailed);
+	constructor(numberOfCoconuts) {
+		super();
 
 		this.numberOfCoconuts = numberOfCoconuts;
 	}
@@ -58,7 +55,10 @@ class AfricanParrot extends Parrot {
 
 class NorwegianBlueParrot extends Parrot {
 	constructor(voltage, isNailed) {
-		super(voltage, isNailed);
+		super();
+
+		this.voltage = voltage;
+		this.isNailed = isNailed;
 	}
 
 	getSpeed() {
