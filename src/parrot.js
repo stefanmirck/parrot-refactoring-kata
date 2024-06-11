@@ -51,15 +51,18 @@ class AfricanParrot extends Parrot {
 }
 
 class NorwegianBlueParrot extends Parrot {
+	#voltage;
+	#isNailed;
+
 	constructor(voltage, isNailed) {
 		super();
 
-		this.voltage = voltage;
-		this.isNailed = isNailed;
+		this.#voltage = voltage;
+		this.#isNailed = isNailed;
 	}
 
 	getSpeed() {
-		return (this.isNailed) ? 0 : this.getBaseSpeedWithVoltage(this.voltage);
+		return (this.#isNailed) ? 0 : this.getBaseSpeedWithVoltage(this.#voltage);
 	}
 
 	getBaseSpeedWithVoltage(voltage) {
