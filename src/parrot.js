@@ -21,10 +21,6 @@ export function createParrot({
 }
 
 class Parrot {
-	getLoadFactor() {
-		return 9;
-	}
-
 	getBaseSpeed() {
 		return 12;
 	}
@@ -41,6 +37,10 @@ class AfricanParrot extends Parrot {
 		super();
 
 		this.numberOfCoconuts = numberOfCoconuts;
+	}
+
+	getLoadFactor() {
+		return 9;
 	}
 
 	getSpeed() {
