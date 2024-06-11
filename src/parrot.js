@@ -33,10 +33,12 @@ class EuropeanParrot extends Parrot {
 }
 
 class AfricanParrot extends Parrot {
+	#numberOfCoconuts;
+
 	constructor(numberOfCoconuts) {
 		super();
 
-		this.numberOfCoconuts = numberOfCoconuts;
+		this.#numberOfCoconuts = numberOfCoconuts;
 	}
 
 	#getLoadFactor() {
@@ -44,7 +46,7 @@ class AfricanParrot extends Parrot {
 	}
 
 	getSpeed() {
-		return Math.max(0, this.getBaseSpeed() - this.#getLoadFactor() * this.numberOfCoconuts);
+		return Math.max(0, this.getBaseSpeed() - this.#getLoadFactor() * this.#numberOfCoconuts);
 	}
 }
 
