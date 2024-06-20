@@ -15,9 +15,12 @@
 	"license": "MIT",
 	"main": "src/parrot.js",
 	"scripts": {
+		"mutator": "stryker run",
 		"test": "c8 node --test"
 	},
 	"devDependencies": {
+		"@stryker-mutator/api": "^8.2.6",
+		"@stryker-mutator/core": "^8.2.6",
 		"c8": "^10.1.2"
 	}
 }
