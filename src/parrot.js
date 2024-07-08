@@ -1,8 +1,8 @@
-export const PARROT_TYPES = {
-	EUROPEAN: 'EUROPEAN',
-	AFRICAN: 'AFRICAN',
-	NORWEGIAN_BLUE: 'NORWEGIAN_BLUE',
-};
+export const PARROT_TYPES = Object.freeze({
+	EUROPEAN: Symbol('EUROPEAN'),
+	AFRICAN: Symbol('AFRICAN'),
+	NORWEGIAN_BLUE: Symbol('NORWEGIAN_BLUE'),
+});
 
 export function createParrot({
 	type,
