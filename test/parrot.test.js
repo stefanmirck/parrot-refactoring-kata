@@ -7,6 +7,7 @@ test("get speed of european parrot", () => {
 		type: ParrotType.European,
 	});
 
+	assert.match({}.toString.call(parrot), /EuropeanParrot/);
 	assert.equal(parrot.getSpeed(), 12);
 });
 
@@ -16,6 +17,7 @@ test("get speed of african parrot with one coconut", () => {
 		numberOfCoconuts: 1,
 	});
 
+	assert.match({}.toString.call(parrot), /AfricanParrot/);
 	assert.equal(parrot.getSpeed(), 3);
 });
 
@@ -43,6 +45,7 @@ test("get speed norwegian blue parrot nailed", () => {
 		isNailed: true,
 	});
 
+	assert.match({}.toString.call(parrot), /NorwegianBlueParrot/);
 	assert.equal(parrot.getSpeed(), 0);
 });
 

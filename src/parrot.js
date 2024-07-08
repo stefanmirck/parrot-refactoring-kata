@@ -30,6 +30,10 @@ class EuropeanParrot extends Parrot {
 	getSpeed() {
 		return this.getBaseSpeed();
 	}
+
+	get [Symbol.toStringTag]() {
+		return 'EuropeanParrot';
+	}
 }
 
 class AfricanParrot extends Parrot {
@@ -48,6 +52,10 @@ class AfricanParrot extends Parrot {
 	getSpeed() {
 		return Math.max(0, this.getBaseSpeed() - this.#getLoadFactor() * this.#numberOfCoconuts);
 	}
+
+	get [Symbol.toStringTag]() {
+		return 'AfricanParrot';
+	}
 }
 
 class NorwegianBlueParrot extends Parrot {
@@ -63,5 +71,9 @@ class NorwegianBlueParrot extends Parrot {
 
 	getSpeed() {
 		return this.#isNailed ? 0 : Math.min(24, this.#voltage * this.getBaseSpeed());
+	}
+
+	get [Symbol.toStringTag]() {
+		return 'NorwegianBlueParrot';
 	}
 }
