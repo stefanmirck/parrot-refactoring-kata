@@ -1,7 +1,7 @@
-export const PARROT_TYPES = Object.freeze({
-	EUROPEAN: Symbol('EUROPEAN'),
-	AFRICAN: Symbol('AFRICAN'),
-	NORWEGIAN_BLUE: Symbol('NORWEGIAN_BLUE'),
+export const ParrotType = Object.freeze({
+	European: Symbol('EUROPEAN'),
+	African: Symbol('AFRICAN'),
+	NorwegianBlue: Symbol('NORWEGIAN_BLUE'),
 });
 
 export function createParrot({
@@ -11,11 +11,11 @@ export function createParrot({
 	isNailed = false,
 }) {
 	switch (type) {
-		case PARROT_TYPES.EUROPEAN:
+		case ParrotType.European:
 			return new EuropeanParrot();
-		case PARROT_TYPES.AFRICAN:
+		case ParrotType.African:
 			return new AfricanParrot(numberOfCoconuts);
-		case PARROT_TYPES.NORWEGIAN_BLUE:
+		case ParrotType.NorwegianBlue:
 			return new NorwegianBlueParrot(voltage, isNailed);
 	}
 }

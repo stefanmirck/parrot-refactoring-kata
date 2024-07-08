@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { createParrot, PARROT_TYPES } from '../src/parrot.js';
+import { createParrot, ParrotType } from '../src/parrot.js';
 
 test("get speed of european parrot", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.EUROPEAN,
+		type: ParrotType.European,
 	});
 
 	assert.equal(parrot.getSpeed(), 12);
@@ -12,7 +12,7 @@ test("get speed of european parrot", () => {
 
 test("get speed of african parrot with one coconut", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.AFRICAN,
+		type: ParrotType.African,
 		numberOfCoconuts: 1,
 	});
 
@@ -21,7 +21,7 @@ test("get speed of african parrot with one coconut", () => {
 
 test("get speed of african parrot with two coconuts", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.AFRICAN,
+		type: ParrotType.African,
 		numberOfCoconuts: 2,
 	});
 
@@ -30,7 +30,7 @@ test("get speed of african parrot with two coconuts", () => {
 
 test("get speed of african parrot with no coconuts", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.AFRICAN,
+		type: ParrotType.African,
 	});
 
 	assert.equal(parrot.getSpeed(), 12);
@@ -38,7 +38,7 @@ test("get speed of african parrot with no coconuts", () => {
 
 test("get speed norwegian blue parrot nailed", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.NORWEGIAN_BLUE,
+		type: ParrotType.NorwegianBlue,
 		voltage: 1.5,
 		isNailed: true,
 	});
@@ -48,7 +48,7 @@ test("get speed norwegian blue parrot nailed", () => {
 
 test("get speed norwegian blue parrot not nailed", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.NORWEGIAN_BLUE,
+		type: ParrotType.NorwegianBlue,
 		voltage: 1.5,
 	});
 
@@ -57,7 +57,7 @@ test("get speed norwegian blue parrot not nailed", () => {
 
 test("get speed norwegian blue parrot not nailed high voltage", () => {
 	const parrot = new createParrot({
-		type: PARROT_TYPES.NORWEGIAN_BLUE,
+		type: ParrotType.NorwegianBlue,
 		voltage: 4,
 	});
 
